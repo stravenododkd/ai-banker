@@ -18,3 +18,23 @@
     </div>
 </body>
 </html>
+<script>
+document.querySelector("button").addEventListener("click", function() {
+    fetch('/api/deposit', {
+        method: 'POST'
+    }).then(response => response.text())
+      .then(data => alert(data))
+      .catch(error => console.error('Error:', error));
+});
+
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    fetch('/api/receipt/upload', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.text())
+      .then(data => alert(data))
+      .catch(error => console.error('Error:', error));
+});
+</script>
