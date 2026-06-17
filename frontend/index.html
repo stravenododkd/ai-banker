@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام التحقق من الإيداعات</title>
+</head>
+<body>
+    <div style="max-width: 500px; margin: 50px auto; font-family: sans-serif;">
+        <h2>طلب إيداع جديد</h2>
+        <button onclick="alert('تم إنشاء الطلب بنجاح!')">طلب إيداع</button>
+
+        <h2 style="margin-top: 40px;">رفع إيصال التحويل</h2>
+        <form onsubmit="event.preventDefault(); alert('تم رفع الإيصال بنجاح!');">
+            <input type="file" required>
+            <button type="submit">رفع الإيصال</button>
+        </form>
+    </div>
+</body>
+</html>
